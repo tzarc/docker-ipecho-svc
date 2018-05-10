@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+
+  ipecho-svc:
+    image: tzarc/ipecho-svc:latest
+    ports:
+      - "59001-59003:59001-59003"
+    environment:
+      - "ECHO_UID=1000"
+      - "ECHO_GID=1000"
+      - "ECHO_PORTS=59001 59002 59003"
